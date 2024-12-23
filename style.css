@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@400;500;600&display=swap');
 
 * {
-    margin: 4px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     scrollbar-width: thin;
@@ -23,6 +23,8 @@ body {
     background-color: #1D1D22;
     font-family: Arial, sans-serif;
     color: white;
+    overflow-x: hidden; /* Add this to prevent horizontal scroll */
+    width: 100%; /* Ensure body takes full width */
 }
 
 /* Custom Scrollbar Styling */
@@ -132,4 +134,21 @@ p {
 /* Ensures smooth image scaling */
 .art-item img {
     backface-visibility: hidden;
+}
+
+/* Add these styles after your existing navbar styles */
+
+@media (max-width: 768px) {
+    .nav {
+        padding: 1rem;
+    }
+    
+    #mobileMenu {
+        box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+    }
+    
+    #mobileMenu a {
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+    }
 }
