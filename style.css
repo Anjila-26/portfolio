@@ -4,6 +4,8 @@
     margin: 4px;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #E06031 #1A1A1A;
 }
 
 @font-face {
@@ -23,12 +25,13 @@ body {
     color: white;
 }
 
+/* Custom Scrollbar Styling */
 ::-webkit-scrollbar {
     width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #1a1a1a;
+    background: #1A1A1A;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -37,7 +40,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #c04f28;
+    background: #c15129;
 }
 
 .nav {
