@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Anjila Subedi</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
@@ -65,15 +65,14 @@
         </div>
     </nav>
 
-    <div class="relative pt-16">
-        <!-- Make image responsive -->
-        <img class="anjila mx-auto w-[280px] md:w-[435px] h-auto" src="image/image1.png" alt="Anjila Subedi">
+    <!-- Hero Section -->
+    <div class="relative min-h-screen flex flex-col justify-center items-center pt-16 px-4">
+        <img class="anjila w-[280px] md:w-[435px] h-auto mb-8 md:mb-0" src="image/image1.png" alt="Anjila Subedi">
         
-        <!-- Make heading responsive -->
-        <h1 class="font-yapari text-5xl md:text-7xl lg:text-9xl text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking-extra-wide text-center">ANJILA</h1>
+        <h1 class="font-yapari text-4xl sm:text-5xl md:text-7xl lg:text-9xl text-white text-center tracking-extra-wide mt-4">ANJILA</h1>
         
-        <!-- Updated social media icons positioning -->
-        <div class="flex space-x-4 absolute bottom-[-50px] md:bottom-0 left-1/2 md:left-[80%] transform -translate-x-1/2 md:-translate-x-0 gap-8">
+        <!-- Social Icons -->
+        <div class="flex justify-center space-x-6 mt-8 md:mt-12">
             <a href="https://www.linkedin.com/in/anjila-subedi-067a6a1a0/" target="_blank" class="text-white hover:text-[#E06031]">
                 <i class="fa-brands fa-linkedin text-xl md:text-2xl"></i>
             </a>
@@ -89,138 +88,140 @@
         </div>
     </div>
 
-    <section id="aboutme" class="min-h-screen bg-[#1A1A1A] pt-20">
-        <h2 class="text-4xl font-yapari text-white text-center tracking-wide relative">
-            <span class="absolute -left-4 -top-6 text-6xl text-[#E06031]/10">&lt;</span>
-            About Me
-            <span class="absolute -right-4 -top-6 text-6xl text-[#E06031]/10">/&gt;</span>
-        </h2>
-    
-        <div class="container mx-auto px-4 mt-16">
-            <!-- Change flex-wrap and direction for mobile -->
-            <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
-                <!-- Left Column - Update width classes -->
-                <div class="w-full md:w-[45%] mb-8 md:mb-0">
-                    <div class="relative group">
-                        <div class="relative">
-                            <img src="image/profile.jpg" alt="Anjila Subedi" 
-                                 class="w-4/5 md:w-3/4 rounded-lg mx-auto shadow-2xl transform hover:scale-105 transition duration-500">
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Right Column - Update width classes -->
-                <div class="w-full md:w-[45%] text-white space-y-8">
-                    <!-- Bio Section and Skills Grid remain unchanged -->
-                    <div class="bg-[#252525] rounded-lg p-6 transform hover:scale-105 transition duration-300">
-                        <h3 class="text-2xl font-yapari text-[#E06031] mb-4 flex items-center">
-                            <i class="fas fa-user-circle mr-3"></i>Who am I?
-                        </h3>
-                        <p class="font-raleway leading-relaxed">
-                            A passionate AI Developer and creative artist based in Nepal, currently pursuing B.Tech at Kathmandu University. 
-                            I blend technical expertise with artistic vision to create innovative solutions.
-                        </p>
-                    </div>
-    
-                    <!-- Skills Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="bg-[#252525] rounded-lg p-4 transform hover:scale-105 transition duration-300">
-                            <i class="fas fa-brain text-[#E06031] text-2xl mb-2 "></i>
-                            <h4 class="font-yapari text-lg tracking-mid-wide">AI/ML</h4>
-                            <p class="text-gray-400 text-sm mt-2">Python, TensorFlow, PyTorch</p>
-                        </div>
-                        <div class="bg-[#252525] rounded-lg p-4 transform hover:scale-105 transition duration-300">
-                            <i class="fas fa-code text-[#E06031] text-2xl mb-2"></i>
-                            <h4 class="font-yapari text-lg tracking-mid-wide">Full Stack</h4>
-                            <p class="text-gray-400 text-sm mt-2">React, Next.js, fast, Django</p>
-                        </div>
-                        <div class="bg-[#252525] rounded-lg p-4 transform hover:scale-105 transition duration-300">
-                            <i class="fas fa-paint-brush text-[#E06031] text-2xl mb-2"></i>
-                            <h4 class="font-yapari text-lg tracking-mid-wide">UI/UX Design</h4>
-                            <p class="text-gray-400 text-sm mt-2">Figma</p>
-                        </div>
-                        <div class="bg-[#252525] rounded-lg p-4 transform hover:scale-105 transition duration-300">
-                            <i class="fas fa-pencil-alt text-[#E06031] text-2xl mb-2"></i>
-                            <h4 class="font-yapari text-lg tracking-mid-wide">Digital Art</h4>
-                            <p class="text-gray-400 text-sm mt-2">Photoshop, clipstudio Paint, Sketchbook</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-
-    <section id="award" class="min-h-screen bg-[#1A1A1A] pt-20">
-        <h2 class="text-4xl font-yapari text-white text-center tracking-wide mb-12">Awards & Achievements</h2>
+    <section id="aboutme" class="py-20 bg-[#1A1A1A]">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-4xl font-yapari text-white text-center tracking-wide relative">
+                <span class="absolute -left-4 -top-6 text-6xl text-[#E06031]/10">&lt;</span>
+                About Me
+                <span class="absolute -right-4 -top-6 text-6xl text-[#E06031]/10">/&gt;</span>
+            </h2>
         
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Award Card 1 -->
-                <div class="bg-[#252525] rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                    <img src="image/codefest.jpg" alt="Codefest 2024" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-[#E06031] font-yapari text-xl mb-2 tracking-mid-wide">National Winner</h3>
-                        <h4 class="text-white font-raleway text-lg mb-2">Codefest 2024</h4>
-                        <!-- <p class="text-gray-400 font-raleway">Project: AI-powered Solution for Healthcare</p> -->
+            <div class="container mx-auto px-4 mt-16">
+                <!-- Change flex-wrap and direction for mobile -->
+                <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                    <!-- Left Column - Update width classes -->
+                    <div class="w-full md:w-[45%] mb-8 md:mb-0">
+                        <div class="relative group">
+                            <div class="relative">
+                                <img src="image/profile.jpg" alt="Anjila Subedi" 
+                                     class="w-4/5 md:w-3/4 rounded-lg mx-auto shadow-2xl transform hover:scale-105 transition duration-500">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Right Column - Update width classes -->
+                    <div class="w-full md:w-[45%] text-white space-y-8">
+                        <!-- Bio Section and Skills Grid remain unchanged -->
+                        <div class="bg-[#252525] rounded-lg p-6 transform hover:scale-105 transition duration-300">
+                            <h3 class="text-2xl font-yapari text-[#E06031] mb-4 flex items-center">
+                                <i class="fas fa-user-circle mr-3"></i>Who am I?
+                            </h3>
+                            <p class="font-raleway leading-relaxed">
+                                A passionate AI Developer and creative artist based in Nepal, currently pursuing B.Tech at Kathmandu University. 
+                                I blend technical expertise with artistic vision to create innovative solutions.
+                            </p>
+                        </div>
+        
+                        <!-- Skills Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-[#252525] rounded-lg p-4 transform hover:scale-105 transition duration-300">
+                                <i class="fas fa-brain text-[#E06031] text-2xl mb-2 "></i>
+                                <h4 class="font-yapari text-lg tracking-mid-wide">AI/ML</h4>
+                                <p class="text-gray-400 text-sm mt-2">Python, TensorFlow, PyTorch</p>
+                            </div>
+                            <div class="bg-[#252525] rounded-lg p-4 transform hover:scale-105 transition duration-300">
+                                <i class="fas fa-code text-[#E06031] text-2xl mb-2"></i>
+                                <h4 class="font-yapari text-lg tracking-mid-wide">Full Stack</h4>
+                                <p class="text-gray-400 text-sm mt-2">React, Next.js, fast, Django</p>
+                            </div>
+                            <div class="bg-[#252525] rounded-lg p-4 transform hover:scale-105 transition duration-300">
+                                <i class="fas fa-paint-brush text-[#E06031] text-2xl mb-2"></i>
+                                <h4 class="font-yapari text-lg tracking-mid-wide">UI/UX Design</h4>
+                                <p class="text-gray-400 text-sm mt-2">Figma</p>
+                            </div>
+                            <div class="bg-[#252525] rounded-lg p-4 transform hover:scale-105 transition duration-300">
+                                <i class="fas fa-pencil-alt text-[#E06031] text-2xl mb-2"></i>
+                                <h4 class="font-yapari text-lg tracking-mid-wide">Digital Art</h4>
+                                <p class="text-gray-400 text-sm mt-2">Photoshop, clipstudio Paint, Sketchbook</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Award Card 2 -->
-                <div class="bg-[#252525] rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                    <img src="image/shequal1.jpg" alt="Shequal Hackathon" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-[#E06031] font-yapari text-xl mb-2 tracking-mid-wide">Winner</h3>
-                        <h4 class="text-white font-raleway text-lg mb-2">Nepal Largest All female hackathon 2023 @Shequal Foundation</h4>
-                        <!-- <p class="text-gray-400 font-raleway">Project: Smart Education Platform</p> -->
-                    </div>
-                </div>
-
-                <!-- Award Card 3 -->
-                <div class="bg-[#252525] rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                    <img src="image/deerhack.JPG" alt="Tech Summit 2023" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-[#E06031] font-yapari text-xl mb-2 tracking-mid-wide">AI/ML Track Winner</h3>
-                        <h4 class="text-white font-raleway text-lg mb-2">Deerhack 2023</h4>
-                        <!-- <p class="text-gray-400 font-raleway">Project: Sustainable Tech Solution</p> -->
-                    </div>
-                </div>
-
-                <!-- Award Card 4 -->
-                <div class="bg-[#252525] rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                    <img src="image/udhyam.jpg" alt="OpenCode" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-[#E06031] font-yapari text-xl mb-2 tracking-mid-wide">1st Runner Up</h3>
-                        <h4 class="text-white font-raleway text-lg mb-2">Udhyam 2023</h4>
-                    </div>
-                </div>
-
-                <!-- Award Card 5 -->
-                <div class="bg-[#252525] rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                    <img src="image/ideathon.jpg" alt="NSIC" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-[#E06031] font-yapari text-xl mb-2 tracking-mid-wide">Top 1</h3>
-                        <h4 class="text-white font-raleway text-lg mb-2">Bagmati Province Ideathon 2023 @Codefest2024</h4>
-                    </div>
-                </div>
-
-                <!-- Award Card 6 -->
-                <div class="bg-[#252525] rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                    <img src="image/datathon.JPG" alt="KU Hackfest" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-[#E06031] font-yapari text-xl mb-2 tracking-mid-wide">1st Runner Up</h3>
-                        <h4 class="text-white font-raleway text-lg mb-2">Datathon 2023 @KUAIC</h4>
-                    </div>
-                </div>
-
-                
             </div>
         </div>
     </section>
 
+    <section id="award" class="py-20 bg-[#1A1A1A]">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-4xl font-yapari text-white text-center tracking-wide mb-12">Awards & Achievements</h2>
+            
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Award Card 1 -->
+                    <div class="bg-[#252525] rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="image/codefest.jpg" alt="Codefest 2024" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-[#E06031] font-yapari text-xl mb-2 tracking-mid-wide">National Winner</h3>
+                            <h4 class="text-white font-raleway text-lg mb-2">Codefest 2024</h4>
+                            <!-- <p class="text-gray-400 font-raleway">Project: AI-powered Solution for Healthcare</p> -->
+                        </div>
+                    </div>
 
-        <section id="arts" class="min-h-screen bg-[#1A1A1A] pt-20 pb-20">
+                    <!-- Award Card 2 -->
+                    <div class="bg-[#252525] rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="image/shequal1.jpg" alt="Shequal Hackathon" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-[#E06031] font-yapari text-xl mb-2 tracking-mid-wide">Winner</h3>
+                            <h4 class="text-white font-raleway text-lg mb-2">Nepal Largest All female hackathon 2023 @Shequal Foundation</h4>
+                            <!-- <p class="text-gray-400 font-raleway">Project: Smart Education Platform</p> -->
+                        </div>
+                    </div>
+
+                    <!-- Award Card 3 -->
+                    <div class="bg-[#252525] rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="image/deerhack.JPG" alt="Tech Summit 2023" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-[#E06031] font-yapari text-xl mb-2 tracking-mid-wide">AI/ML Track Winner</h3>
+                            <h4 class="text-white font-raleway text-lg mb-2">Deerhack 2023</h4>
+                            <!-- <p class="text-gray-400 font-raleway">Project: Sustainable Tech Solution</p> -->
+                        </div>
+                    </div>
+
+                    <!-- Award Card 4 -->
+                    <div class="bg-[#252525] rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="image/udhyam.jpg" alt="OpenCode" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-[#E06031] font-yapari text-xl mb-2 tracking-mid-wide">1st Runner Up</h3>
+                            <h4 class="text-white font-raleway text-lg mb-2">Udhyam 2023</h4>
+                        </div>
+                    </div>
+
+                    <!-- Award Card 5 -->
+                    <div class="bg-[#252525] rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="image/ideathon.jpg" alt="NSIC" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-[#E06031] font-yapari text-xl mb-2 tracking-mid-wide">Top 1</h3>
+                            <h4 class="text-white font-raleway text-lg mb-2">Bagmati Province Ideathon 2023 @Codefest2024</h4>
+                        </div>
+                    </div>
+
+                    <!-- Award Card 6 -->
+                    <div class="bg-[#252525] rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="image/datathon.JPG" alt="KU Hackfest" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-[#E06031] font-yapari text-xl mb-2 tracking-mid-wide">1st Runner Up</h3>
+                            <h4 class="text-white font-raleway text-lg mb-2">Datathon 2023 @KUAIC</h4>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="arts" class="py-20 bg-[#1A1A1A]">
+        <div class="container mx-auto px-4 max-w-6xl">
             <!-- Creative Section Header -->
             <div class="relative mb-16">
                 <h2 class="text-4xl font-yapari text-white text-center tracking-wide">

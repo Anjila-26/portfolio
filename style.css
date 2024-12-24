@@ -25,6 +25,12 @@ body {
     color: white;
     overflow-x: hidden; /* Add this to prevent horizontal scroll */
     width: 100%; /* Ensure body takes full width */
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Custom Scrollbar Styling */
@@ -150,5 +156,33 @@ p {
     #mobileMenu a {
         font-size: 1.1rem;
         transition: color 0.3s ease;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2rem;
+        word-break: break-word;
+    }
+    
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    #aboutme, #award, #arts {
+        padding-top: 3rem;
+    }
+    
+    .grid {
+        gap: 1rem;
+    }
+}
+
+/* Fix for mobile Safari */
+@supports (-webkit-touch-callout: none) {
+    .min-h-screen {
+        min-height: -webkit-fill-available;
     }
 }
