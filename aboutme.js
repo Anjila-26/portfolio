@@ -1,36 +1,33 @@
-// about.js - Simpler version that's closer to the original design
+// about.js - Visually interesting version without conventional boxes
 // Profile and Bio Data
 const profile = {
-    image: "image/profile.jpg",
-    alt: "Anjila Subedi",
-    bio: "A passionate AI Developer and creative artist based in Nepal, currently pursuing B.Tech at Kathmandu University. I blend technical expertise with artistic vision to create innovative solutions."
+    bio: "AI/ML Intern and Designer from Nepal, currently pursuing a B.Tech in AI  degree at Kathmandu University. I specialize in building intelligent systems, blending machine learning with creative problem-solving. With experience in full-stack development and UI/UX design, I focus on creating user-friendly, scalable, and efficient applications that bridge technology and creativity."
   };
-  
-  // Skills Data
-  const skills = [
+  // Expertise Data
+  const expertise = [
     {
       id: 1,
-      title: "AI/ML",
-      icon: "fas fa-brain",
-      description: "Python, TensorFlow, PyTorch"
+      title: "Machine Learning / Artificial",
+      icon: "fa fa-robot",
+      description: "Specializing in Large Language Models (LLMs) for conversational AI, prompt engineering, and fine-tuning foundation models using Python, TensorFlow, and PyTorch to create intelligent, context-aware applications."
     },
     {
       id: 2,
-      title: "Full Stack",
-      icon: "fas fa-code",
-      description: "React, Next.js, FastAPI, Django"
+      title: "Full Stack Developer",
+      icon: "fas fa-laptop-code",
+      description: "Building responsive web applications with modern frameworks including React, Next.js, FastAPI, and Django, with a focus on scalable architecture and clean code."
     },
     {
       id: 3,
-      title: "UI/UX Design",
-      icon: "fas fa-paint-brush",
-      description: "Figma"
+      title: "UI/UX Designer",
+      icon: "fa fa-desktop",
+      description: "Creating intuitive user experiences and interfaces with a user-centered design approach, wireframing, prototyping, and implementing designs using Figma."
     },
     {
       id: 4,
-      title: "Digital Art",
-      icon: "fas fa-pencil-alt",
-      description: "Photoshop, Clipstudio Paint, Sketchbook"
+      title: "Graphic Designer",
+      icon: "fa-solid fa-tablet-screen-button",
+      description: "Developing visual concepts and digital illustrations with industry-standard tools including Adobe Photoshop, Clipstudio Paint, and Sketchbook Pro."
     }
   ];
   
@@ -41,38 +38,43 @@ const profile = {
     
     try {
       if (aboutContainer) {
-        // Create a complete about section that matches the original design
+        // Create a visually interesting layout with flowing elements
         aboutContainer.innerHTML = `
-          <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
-            <!-- Left Column - Profile Image -->
-            <div class="w-full md:w-[45%] mb-8 md:mb-0">
-              <div class="relative group">
-                <div class="relative">
-                  <img src="${profile.image}" alt="${profile.alt}" 
-                       class="w-4/5 md:w-3/4 rounded-lg mx-auto shadow-2xl transform hover:scale-105 transition duration-500">
-                </div>
-              </div>
+          <div class="text-white">
+            <!-- Bio Section with subtle gradient background -->
+            <div class="relative py-6 mb-5">
+              <div class="absolute inset-0 bg-gradient-to-r from-[#1a1a1a] to-transparent opacity-40 rounded-l-lg"></div>
+              <p class="font-poppins font-medium leading-relaxed text-sm relative z-10 pl-4 border-l-2 border-[#E06031]">
+                ${profile.bio}
+              </p>
             </div>
             
-            <!-- Right Column - Bio and Skills -->
-            <div class="w-full md:w-[45%] text-white space-y-8">
-              <!-- Bio Section -->
-              <div class="bg-[#252525] rounded-lg p-6 transform hover:scale-105 transition duration-300">
-                <h3 class="text-2xl font-poppins font-bold text-[#E06031] mb-4 flex items-center">
-                  <i class="fas fa-user-circle mr-3"></i>Who am I?
-                </h3>
-                <p class="font-poppins font-medium leading-relaxed">
-                  ${profile.bio}
-                </p>
-              </div>
+            <!-- Expertise Section with connected elements -->
+            <div class="">
+              <h3 class="text-2xl font-poppins text-[#E06031] mb-12 relative">
+                Areas Of Expertise
+                <span class="absolute -bottom-4 left-0 w-24 h-px bg-gradient-to-r from-[#E06031] to-transparent"></span>
+              </h3>
               
-              <!-- Skills Grid -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                ${skills.map(skill => `
-                  <div class="bg-[#252525] rounded-lg p-4 transform hover:scale-105 transition duration-300">
-                    <i class="${skill.icon} text-[#E06031] text-2xl mb-2"></i>
-                    <h4 class="font-poppins font-semibold text-lg tracking-mid-wide">${skill.title}</h4>
-                    <p class="text-gray-400 text-sm mt-2">${skill.description}</p>
+              <div class="flex flex-wrap">
+                ${expertise.map((item, index) => `
+                  <div class="relative group w-full md:w-1/2 lg:w-1/4 mb-10 pr-6 justify-between">
+                    <!-- Icon with hover effect -->
+                    <div class="mb-4 transform transition-all duration-300 group-hover:translate-y-[-5px]">
+                      <i class="${item.icon} text-[#E06031] text-4xl"></i>
+                      <div class="h-px w-12 mt-3 transform origin-left transition-all duration-300 group-hover:w-20"></div>
+                    </div>
+                    
+                    <!-- Title -->
+                    <h4 class="font-poppins font-semibold text-lg mb-3 transition-all duration-300 group-hover:text-[#E06031]">${item.title}</h4>
+                    
+                    <!-- Description -->
+                    <p class="text-gray-300 text-sm leading-relaxed pr-4">${item.description}</p>
+                    
+                    <!-- Connecting element (except for last item) -->
+                    ${index < expertise.length - 1 ? `
+                      <div class="hidden lg:block absolute top-0 right-3 h-full w-px bg-gradient-to-b from-transparent via-[#333333] to-transparent opacity-50"></div>
+                    ` : ''}
                   </div>
                 `).join('')}
               </div>
@@ -80,7 +82,7 @@ const profile = {
           </div>
         `;
         
-        console.log("About section rendered successfully!");
+        console.log("About section rendered successfully with visually interesting elements!");
       } else {
         console.error("About container not found! Make sure the element with id='about-container' exists in the DOM.");
       }
@@ -90,4 +92,4 @@ const profile = {
   });
   
   // Log a simple message to confirm the script has loaded
-  console.log("about.js has loaded!");
+  console.log("about.js has loaded with visually interesting elements!");

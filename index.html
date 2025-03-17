@@ -260,11 +260,138 @@
         </div>
     </section>
 
+    <section id="contact" class="py-20 bg-[#1A1A1A]">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-4xl font-researcher text-white text-center tracking-wide relative mb-16">
+                <span class="absolute -left-4 -top-6 text-6xl text-[#E06031]/10">@</span>
+                Contact Me
+                <span class="absolute -right-4 -top-6 text-6xl text-[#E06031]/10">@</span>
+            </h2>
+            
+            <div class="flex justify-center items-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl w-full">
+                    <!-- Contact Form -->
+                    <div class="bg-[#252525] p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-researcher text-white mb-6 text-center">Send a Message</h3>
+                        
+                        <form id="contactForm" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-white text-sm mb-2">Name</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-[#1A1A1A] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#E06031]" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-white text-sm mb-2 ">Email</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-[#1A1A1A] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#E06031]" required>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-white text-sm mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 bg-[#1A1A1A] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#E06031]" required>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-white text-sm mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 bg-[#1A1A1A] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#E06031]" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="group relative overflow-hidden border-[1px] border-[#E06031] text-[#E06031] hover:bg-[#E06031] transition-all duration-300 font-researcher tracking-wide whitespace-nowrap inline-flex items-center justify-center w-full h-[50px]">
+                                <span class="transform transition-all duration-300 group-hover:opacity-0">Send Message</span>
+                                <i class="fas fa-paper-plane text-xl absolute transform translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-hover:text-white transition-all duration-300"></i>
+                            </button>
+                            
+                            <div id="formMessage" class="text-center hidden">
+                                <p class="text-green-500">Message sent successfully!</p>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Information -->
+                    <div class="text-white flex flex-col">
+                        <h3 class="text-2xl font-researcher mb-8 text-center">Get in Touch</h3>
+                        
+                        <div class="space-y-6 w-full">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-[#252525] p-3 rounded-full text-[#E06031] mt-1">
+                                    <i class="fas fa-envelope-open-text text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-1">Email</h4>
+                                    <a href="mailto:anjilakshetri@gmail.com" class="text-gray-300 hover:text-[#E06031] transition-colors">anjilakshetri@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="bg-[#252525] p-3 rounded-full text-[#E06031] mt-1">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-1">Location</h4>
+                                    <p class="text-gray-300">Kathmandu, Nepal</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="bg-[#252525] p-3 rounded-full text-[#E06031] mt-1">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-1">Phone</h4>
+                                    <a href="tel:+977xxxxxxxx" class="text-gray-300 hover:text-[#E06031] transition-colors">+977 98XXXXXXXX</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Links -->
+                        <div class="mt-10 w-full">
+                            <h4 class="text-lg font-semibold mb-5">Connect with Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.linkedin.com/in/anjila-subedi-067a6a1a0/" target="_blank" 
+                                   class="bg-[#1A1A1A] hover:bg-[#E06031] text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://github.com/Anjila-26" target="_blank" 
+                                   class="bg-[#1A1A1A] hover:bg-[#E06031] text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.instagram.com/papermoon98/" target="_blank" 
+                                   class="bg-[#1A1A1A] hover:bg-[#E06031] text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.facebook.com/anjila.kshetr12/" target="_blank" 
+                                   class="bg-[#1A1A1A] hover:bg-[#E06031] text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Business Hours or Additional Info (Optional) -->
+                        <div class="mt-10 p-5 bg-[#252525]/50 rounded-lg border border-[#333333]">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-clock text-[#E06031] mr-3"></i>
+                                <h4 class="text-lg font-semibold">Availability</h4>
+                            </div>
+                            <p class="text-gray-300 text-sm">I respond to messages within 24 hours. Open to freelance opportunities and collaborations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#111111] py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400 text-sm">&copy; 2023 Anjila Subedi. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script src="main.js"></script>
     <script src="project.js"></script>
     <script src="awards.js"></script>
     <script src="arts.js"></script>
     <script src="aboutme.js"></script>
+    <script src="contact.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
