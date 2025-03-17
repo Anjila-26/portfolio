@@ -117,7 +117,7 @@
                     alt="Anjila Subedi"
                 >
                 <!-- Text container with consistent positioning -->
-                <div class="absolute top-1/2 md:left-[25%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-full z-20 px-8">
+                <div class="absolute top-[55%] md:left-[25%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-full z-20 px-8">
                     
                     <!-- Hello introduction -->
                     <!-- <p class="text-white text-lg md:text-2xl tracking-wider font-light opacity-80 ml-[10%] mb-2">
@@ -134,8 +134,13 @@
                     <!-- Role text with fixed height to prevent movement -->
                     <div class="h-[30px] md:h-[40px] mt-4">
                         <p class="text-role text-white text-lg md:text-4xl tracking-wider font-light opacity-80 
-                            text-left inline-block"></p>
+                            text-left inline"></p>
                     </div>
+
+                    <a href="Anjila-Subedi-cv.pdf" download="Anjila-Subedi-cv.pdf" class="group relative mt-5 overflow-hidden border-[1px] border-[#E06031] text-[#E06031] hover:bg-[#E06031] transition-all duration-300 font-researcher tracking-wide whitespace-nowrap inline-flex items-center justify-center w-[200px] h-[40px]">
+                        <span class="transform transition-all duration-300 group-hover:opacity-0">Download CV</span>
+                        <i class="fas fa-download text-xl absolute transform translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-hover:text-white transition-all duration-300"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -325,7 +330,7 @@
                 // If we've finished typing the current role
                 if (!isDeleting && charIndex === fullText.length) {
                     // Pause at the end of typing
-                    typingSpeed = 1500; // Wait before starting to delete
+                    typingSpeed = 1000; // Wait before starting to delete
                     isDeleting = true;
                 } else if (isDeleting && charIndex === 0) {
                     // Move to next role after deleting
