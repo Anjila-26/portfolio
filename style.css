@@ -8,6 +8,16 @@
     scrollbar-color: #E06031 #1A1A1A;
 }
 
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 @font-face {
     font-family: 'Yapari';
     src: url('fonts/Yaparivariable-ultra.ttf') format('truetype');
@@ -185,4 +195,31 @@ p {
     .min-h-screen {
         min-height: -webkit-fill-available;
     }
+}
+
+/* Add performance optimizations */
+
+/* Optimize paint and layout operations */
+.transform, .transition {
+    will-change: transform;
+}
+
+/* Add content-visibility for better performance */
+.card {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+}
+
+/* Typewriter cursor effect */
+.cursor::after {
+    content: '|';
+    display: inline-block;
+    margin-left: 3px;
+    opacity: 1;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }

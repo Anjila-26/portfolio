@@ -55,3 +55,39 @@ imageElement.style.opacity = '1';
 
 // Start animation
 setInterval(animateText, 3000);
+
+// Optimize menu toggle
+const mobileMenu = document.getElementById('mobileMenu');
+const toggleBtn = document.querySelector('[onclick="toggleMenu()"]');
+
+function toggleMenu() {
+    requestAnimationFrame(() => {
+        mobileMenu.classList.toggle('translate-x-full');
+    });
+}
+
+// Optimize scroll handling
+let ticking = false;
+document.addEventListener('scroll', () => {
+    if (!ticking) {
+        requestAnimationFrame(() => {
+            // Handle scroll events here
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+
+// Intersection Observer for animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
