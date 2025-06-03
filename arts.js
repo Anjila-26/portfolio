@@ -2,78 +2,139 @@
 // Art Data
 const arts = [
     {
-      id: 1,
-      image: "image/art/art3.jpg",
-      alt: "Hand Drawn Art",
-      category: "HandDrawn",
-      size: "row-span-2",
-      type: "tall"
+        id: 1,
+        image: "image/art/art1.jpg",
+        alt: "Digital Art 1",
+        category: "DIGITAL ART"
     },
     {
-      id: 2,
-      image: "image/art/art-5.jpg",
-      alt: "Illustration Art",
-      category: "ILLUSTRATION",
-      size: "row-span-2",
-      type: "tall"
+        id: 2,
+        image: "image/art/art2.jpg",
+        alt: "Digital Art 2",
+        category: "DIGITAL ART"
     },
     {
-      id: 3,
-      image: "image/art/ui.png",
-      alt: "UI Design",
-      category: "UI/UX DESIGN",
-      size: "col-span-2",
-      type: "wide"
+        id: 3,
+        image: "image/art/art3.jpg",
+        alt: "Hand Drawn Art",
+        category: "HandDrawn"
     },
     {
-      id: 4,
-      image: "image/art/art2.jpg",
-      alt: "Digital Art 1",
-      category: "DIGITAL ART",
-      size: "aspect-square",
-      type: "square"
+        id: 4,
+        image: "image/art/art4.png",
+        alt: "Digital Art 3",
+        category: "DIGITAL ART"
     },
     {
-      id: 5,
-      image: "image/art/art1.jpg",
-      alt: "Digital Art 2",
-      category: "DIGITAL ART",
-      size: "aspect-square",
-      type: "square"
+        id: 5,
+        image: "image/art/art5.jpg",
+        alt: "Illustration Art",
+        category: "ILLUSTRATION"
+    },
+    {
+        id: 6,
+        image: "image/art/art6.PNG",
+        alt: "UI Design",
+        category: "UI/UX DESIGN"
+    },
+    {
+        id: 7,
+        image: "image/art/art7.jpeg",
+        alt: "Illustration Art",
+        category: "ILLUSTRATION"
+    },
+    {
+        id: 8,
+        image: "image/art/art8.PNG",
+        alt: "UI Design",
+        category: "UI/UX DESIGN"
+    },
+    {
+        id: 9,
+        image: "image/art/art9.jpg",
+        alt: "Digital Art",
+        category: "DIGITAL ART"
+    },
+    {
+        id: 10,
+        image: "image/art/art10.jpeg",
+        alt: "Illustration Art",
+        category: "ILLUSTRATION"
+    },
+    {
+        id: 11,
+        image: "image/art/IMG_0442.jpeg",
+        alt: "Art Work",
+        category: "ILLUSTRATION"
     }
-    // You can add more art items as needed
-  ];
-  
-  // Rendering function - Executes when the DOM is fully loaded
-  document.addEventListener('DOMContentLoaded', function() {
+];
+
+// CSS for marquee animation
+const style = document.createElement('style');
+style.textContent = `
+    .art-scroll-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 400px;
+    }
+
+    .art-track {
+        display: flex;
+        width: max-content;
+        animation: scroll 40s linear infinite;
+    }
+
+    .art-track:hover {
+        animation-play-state: paused;
+    }
+
+    .art-item {
+        flex: 0 0 400px;
+        height: 400px;
+    }
+
+    .art-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+`;
+document.head.appendChild(style);
+
+document.addEventListener('DOMContentLoaded', function() {
     const artContainer = document.getElementById('art-container');
     
-    // If the container exists, render all arts
     if (artContainer) {
-      try {
-        // Generate HTML for each art piece
-        const artsHTML = arts.map(art => {
-          // Return complete art item HTML with the appropriate sizing class
-          return `
-          <div class="group relative overflow-hidden rounded-lg ${art.size} cursor-pointer">
-            <img src="${art.image}" alt="${art.alt}" class="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 p-6 flex flex-col justify-end">
-              <span class="text-[#E06031] font-yapari text-sm tracking-wider">${art.category}</span>
-            </div>
-          </div>
-          `;
-        }).join('');
-        
-        // Insert all arts into the container
-        artContainer.innerHTML = artsHTML;
-        console.log("Arts rendered successfully!");
-      } catch (error) {
-        console.error("Error rendering arts:", error);
-      }
+        try {
+            artContainer.className = 'art-scroll-container';
+            // Double the images to create seamless loop
+            const doubledArts = [...arts, ...arts];
+            const artsHTML = `
+                <div class="art-track">
+                    ${doubledArts.map(art => `
+                        <div class="art-item">
+                            <img src="${art.image}" alt="${art.alt}">
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            artContainer.innerHTML = artsHTML;
+            console.log("Arts rendered successfully!");
+        } catch (error) {
+            console.error("Error rendering arts:", error);
+        }
     } else {
-      console.error("Art container not found! Make sure the element with id='art-container' exists in the DOM.");
+        console.error("Art container not found!");
     }
-  });
-  
-  // Log a simple message to confirm the script has loaded
-  console.log("arts.js has loaded!");
+});

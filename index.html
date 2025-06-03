@@ -108,9 +108,10 @@
     <!-- Hero Section -->
     <div class="relative min-h-screen flex flex-col justify-center items-center pt-16 px-4">
         <div class="relative w-full flex justify-center items-center">
-        <!-- Modified image container with better positioning for mobile and tablet -->
+        <!-- Increased image container dimensions -->
         <div class="relative w-full flex justify-center items-center">
-            <div class="relative w-[450px] md:w-[600px] aspect-square md:pl-8 transform -translate-y-0 md:-translate-y-0 sm:-translate-y-8">
+            <!-- Increased image container dimensions -->
+            <div class="relative w-[450px] md:w-[600px] aspect-square">
                 <img 
                     class="anjila w-full h-full object-contain z-10" 
                     src="image/image1.png" 
@@ -125,7 +126,7 @@
                     </p> -->
 
                     <!-- ANJILA text -->
-                    <h1 class="font-yapari text-4xl sm:text-5xl md:text-8xl lg:text-9xl 
+                    <h1 class="font-yapari text-5xl sm:text-6xl md:text-8xl lg:text-9xl 
                           text-white text-left tracking-extra-wide
                           whitespace-nowrap">
                         ANJILA
@@ -137,9 +138,9 @@
                             text-left inline"></p>
                     </div>
 
-                    <a href="Anjila-Subedi-cv.pdf" download="Anjila-Subedi-cv.pdf" class="group relative mt-5 overflow-hidden border-[1px] border-[#E06031] text-[#E06031] hover:bg-[#E06031] transition-all duration-300 font-researcher tracking-wide whitespace-nowrap inline-flex items-center justify-center w-[160px] sm:w-[180px] md:w-[200px] h-[36px] sm:h-[38px] md:h-[40px] text-sm sm:text-base">
+                    <a href="Anjila-Subedi-cv.pdf" download="Anjila-Subedi-cv.pdf" class="group relative mt-5 overflow-hidden border-[1px] border-[#E06031] text-[#E06031] hover:bg-[#E06031] transition-all duration-300 font-researcher tracking-wide whitespace-nowrap inline-flex items-center justify-center w-[200px] h-[40px]">
                         <span class="transform transition-all duration-300 group-hover:opacity-0">Download CV</span>
-                        <i class="fas fa-download text-lg md:text-xl absolute transform translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-hover:text-white transition-all duration-300"></i>
+                        <i class="fas fa-download text-xl absolute transform translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-hover:text-white transition-all duration-300"></i>
                     </a>
                 </div>
             </div>
@@ -224,7 +225,7 @@
         </div>
     </section>
 
-    <section id="arts" class="py-20 bg-[#1A1A1A]">
+    <section id="arts" class="py-20 bg-[#1A1A1A] overflow-hidden">
         <div class="container mx-auto px-4 max-w-6xl">
             <!-- Creative Section Header -->
             <div class="relative mb-16">
@@ -234,29 +235,13 @@
                     <span class="absolute -right-4 -top-6 text-6xl text-[#E06031]/10">&lt;/&gt;</span>
                 </h2>
             </div>
-    
-            <!-- Optional: Filter Buttons -->
-            <!-- <div class="flex justify-center gap-4 mb-12">
-                <button class="px-6 py-2 rounded-full bg-[#252525] text-white hover:bg-[#E06031] transition-all font-yapari text-sm tracking-wide">All</button>
-                <button class="px-6 py-2 rounded-full bg-[#252525] text-white hover:bg-[#E06031] transition-all font-yapari text-sm tracking-wide">Digital Art</button>
-                <button class="px-6 py-2 rounded-full bg-[#252525] text-white hover:bg-[#E06031] transition-all font-yapari text-sm tracking-wide">UI/UX</button>
-                <button class="px-6 py-2 rounded-full bg-[#252525] text-white hover:bg-[#E06031] transition-all font-yapari text-sm tracking-wide">Illustrations</button>
-            </div> -->
-    
+
             <!-- Art Grid -->
-            <div class="container mx-auto px-4 max-w-[1280px]">
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="art-container">
+            <div class="container mx-auto px-0 max-w-full">
+                <div id="art-container">
                     <!-- Arts will be loaded here by JavaScript -->
                 </div>
             </div>
-    
-            <!-- Optional: View More Button -->
-            <!-- <div class="text-center mt-12">
-                <button class="px-8 py-3 bg-[#252525] text-white hover:bg-[#E06031] transition-all duration-300 rounded-lg font-yapari tracking-wide group">
-                    View More
-                    <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-                </button>
-            </div> -->
         </div>
     </section>
 

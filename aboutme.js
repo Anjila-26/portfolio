@@ -40,44 +40,76 @@ const profile = {
       if (aboutContainer) {
         // Create a visually interesting layout with flowing elements
         aboutContainer.innerHTML = `
-          <div class="text-white">
-            <!-- Bio Section with subtle gradient background -->
-            <div class="relative py-6 mb-5">
-              <div class="absolute inset-0 bg-gradient-to-r from-[#1a1a1a] to-transparent opacity-40 rounded-l-lg"></div>
-              <p class="font-poppins font-medium leading-relaxed text-sm relative z-10 pl-4 border-l-2 border-[#E06031]">
-                ${profile.bio}
-              </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+            <!-- Column 1 - Profile Photo -->
+            <div class="relative">
+              <img src="image/profile.jpg" alt="Profile Photo" class="w-full rounded-lg shadow-lg">
             </div>
-            
-            <!-- Expertise Section with connected elements -->
-            <div class="">
-              <h3 class="text-2xl font-poppins text-[#E06031] mb-12 relative">
-                Areas Of Expertise
-                <span class="absolute -bottom-4 left-0 w-24 h-px bg-gradient-to-r from-[#E06031] to-transparent"></span>
-              </h3>
-              
-              <div class="flex flex-wrap">
-                ${expertise.map((item, index) => `
-                  <div class="relative group w-full md:w-1/2 lg:w-1/4 mb-10 pr-6 justify-between">
-                    <!-- Icon with hover effect -->
-                    <div class="mb-4 transform transition-all duration-300 group-hover:translate-y-[-5px]">
-                      <i class="${item.icon} text-[#E06031] text-4xl"></i>
-                      <div class="h-px w-12 mt-3 transform origin-left transition-all duration-300 group-hover:w-20"></div>
-                    </div>
-                    
-                    <!-- Title -->
-                    <h4 class="font-poppins font-semibold text-lg mb-3 transition-all duration-300 group-hover:text-[#E06031]">${item.title}</h4>
-                    
-                    <!-- Description -->
-                    <p class="text-gray-300 text-sm leading-relaxed pr-4">${item.description}</p>
-                    
-                    <!-- Connecting element (except for last item) -->
-                    ${index < expertise.length - 1 ? `
-                      <div class="hidden lg:block absolute top-0 right-3 h-full w-px bg-gradient-to-b from-transparent via-[#333333] to-transparent opacity-50"></div>
-                    ` : ''}
-                  </div>
-                `).join('')}
+
+            <!-- Column 2 - About Me and Education -->
+            <div class="text-white">
+              <!-- Hello Section -->
+              <div class="mb-8">
+                <p class="text-lg mb-4">
+                  ${profile.bio}
+                </p>
               </div>
+
+              <!-- Education Section -->
+              <div class="mb-8">
+                <h2 class="text-4xl font-bold mb-4">EDUCATION</h2>
+                <div class="mb-4">
+                  <h3 class="text-xl font-semibold">2021 - present: Kathmandu University</h3>
+                  <p>B.Tech in Artificial Intelligence</p>
+                </div>
+                <div class="mb-4">
+                  <h3 class="text-xl font-semibold">2018 - 2020:KEF Higher Secondary School</h3>
+                  <p>High School, Computer Science</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 3 - Skills and Experience -->
+            <div class="text-white">
+              <!-- Skills Section -->
+              <div class="mb-8">
+                <h2 class="text-4xl font-bold mb-4">SKILLS</h2>
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="p-2">
+                    <i class="fab fa-python text-[#E06031] text-4xl"></i>
+                    <p class="mt-2">Python/ML</p>
+                  </div>
+                  <div class="p-2">
+                    <i class="fab fa-react text-[#E06031] text-4xl"></i>
+                    <p class="mt-2">React</p>
+                  </div>
+                  <div class="p-2">
+                    <i class="fas fa-brain text-[#E06031] text-4xl"></i>
+                    <p class="mt-2">AI/LLMs</p>
+                  </div>
+                  <div class="p-2">
+                    <i class="fas fa-paint-brush text-[#E06031] text-4xl"></i>
+                    <p class="mt-2">UI/UX</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Experience Section 
+              <div>
+                <h2 class="text-4xl font-bold mb-4">EXPERIENCE</h2>
+                <div class="grid gap-4">
+                  ${expertise.map(exp => `
+                    <div>
+                      <h3 class="text-xl font-semibold flex items-center">
+                        <i class="${exp.icon} text-[#E06031] mr-2"></i>
+                        ${exp.title}
+                      </h3>
+                      <p class="text-gray-300">${exp.description}</p>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+              -->
             </div>
           </div>
         `;

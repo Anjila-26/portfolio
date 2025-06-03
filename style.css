@@ -223,3 +223,9 @@ p {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
+
+@media (min-width: 960px) and (max-width: 990px) {
+    .hero-image-container {
+        padding-left: 4rem !important; /* Force stronger left padding for this specific width */
+    }
+}
