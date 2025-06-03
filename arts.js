@@ -61,12 +61,7 @@ const arts = [
         alt: "Illustration Art",
         category: "ILLUSTRATION"
     },
-    {
-        id: 11,
-        image: "image/art/IMG_0442.jpeg",
-        alt: "Art Work",
-        category: "ILLUSTRATION"
-    }
+
 ];
 
 // CSS for marquee animation

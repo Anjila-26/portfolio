@@ -31,8 +31,8 @@ const awards = [
     },
     {
       id: 5,
-      title: "Top 1",
-      event: "Bagmati Province Ideathon 2023 @Codefest2024",
+      title: "Semester Topper",
+      event: "5th and 6th Semester @KU(AI)",
       image: "image/ideathon.jpg",
       alt: "NSIC"
     },
